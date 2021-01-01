@@ -1,30 +1,49 @@
-import Test from './components/Test';
-import {useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './views/Home';
+import About from './views/About';
+import Article from './views/Blog/Article';
+import Blog from './views/Blog/Blog';
 import './App.css';
 
 function App() {
-  const [name, setName] = useState('');
-  const handleInput = (event) => {
-    setName(event.target.value);
-  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <input type="text" onKeyUp={handleInput}/>
-        <Test name={name}></Test>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer" 
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/blog/article/:id">
+            <Article />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
