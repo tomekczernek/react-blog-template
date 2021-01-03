@@ -4,9 +4,11 @@ import styled from "styled-components";
 const Nav = ({ className }) => {
   return (
     <div className={className}>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/blog">Blog</NavLink>
+      <NavContainer>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+      </NavContainer>
     </div>
   );
 };
@@ -19,6 +21,14 @@ const NavLink = styled(Link)`
   &:hover {
     background: #eb3b5a;
   }
+`;
+
+const NavContainer = styled.div`
+  max-width: 1220px;
+  width: 100%;
+  padding: 20px 0;
+  margin-right: auto;
+  margin-left: auto;
 `;
 
 const NavStyled = styled(Nav)`

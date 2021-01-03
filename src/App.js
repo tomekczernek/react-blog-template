@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 import About from "./views/About";
-import Article from "./components/Articles/Article";
-import Blog from "./views/Blog/Blog";
+import Article from "./views/Article";
+import Blog from "./views/Blog";
 import Menu from "./components/Menu";
 import "./App.css";
 
