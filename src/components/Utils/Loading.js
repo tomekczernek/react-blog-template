@@ -13,7 +13,7 @@ const LoadingStyled = styled(Loading)`
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 10000;
+    z-index: 990;
     top: 0;
     bottom: 0;
     left: 0;
@@ -29,5 +29,5 @@ const LoadingMessage = styled.p`
     position: absolute;
 `;
 
-//export {Loading};
+export {Loading};
 export default LoadingStyled;

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = ({ className }) => {
@@ -35,6 +35,7 @@ const NavStyled = styled(Nav)`
   background-color: #fc5c65;
   width: 100%;
   display: flex;
+  z-index: 1000;
   justify-content: flex-start;
   position: fixed;
 `;

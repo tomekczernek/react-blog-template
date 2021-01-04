@@ -1,4 +1,4 @@
-import {useParams, Link} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useEffect, useState} from 'react';
 import {ArticleBody} from '../../components/Articles';
 
@@ -31,7 +31,6 @@ function Article() {
     <div>
       {showLoading()}
       <ArticleBody id={article.id} title={article.title} shortText={article.shortText} text={article.text} createDate={article.createDate} ></ArticleBody>
-      <Link to="/blog">Go back</Link>
     </div>
   );
 }

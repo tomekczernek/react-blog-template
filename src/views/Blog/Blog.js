@@ -31,7 +31,6 @@ function Blog() {
     };
     
     return (
-        <div>
         <ArticleContainer>
             {showLoading()}
             {articles.map((item) => (
@@ -40,7 +39,6 @@ function Blog() {
                 </Link>
             ))}
         </ArticleContainer>
-        </div>
     );
   }
   

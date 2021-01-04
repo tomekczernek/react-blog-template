@@ -1,3 +1,13 @@
-.article-link{
-    text-decoration: none;
+.article-link {
+  text-decoration: none;
+}
+
+.article-bg {
+  background: rgb(252, 92, 101);
+  background: linear-gradient(
+    138deg,
+    rgba(252, 92, 101, 1) 15%,
+    rgba(250, 130, 49, 1) 75%,
+    rgba(247, 183, 49, 1) 99%
+  );
 }
