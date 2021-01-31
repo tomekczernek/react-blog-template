@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function request(method, endpoint, data = null){
+function request(method, endpoint){
     return axios({
         method, 
         url: `${process.env.REACT_APP_API_URL}${endpoint}`,
